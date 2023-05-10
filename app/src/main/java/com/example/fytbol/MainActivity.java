@@ -11,14 +11,14 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView ImageView8;
+    private ImageView mImageView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView imageview = (ImageView) findViewById(R.id.imageView8);
+        mImageView = findViewById(R.id.imageView8);
 
         Button startFallingButton = (Button) findViewById(R.id.button);
 
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         startFallingButton.setOnClickListener(new Button.OnClickListener(){
             @Override
-            public void onClick(View view)  {
-               ImageView.startAnimation(fallingAnimation);
+            public void onClick(View arg0) {
+                mImageView.startAnimation(fallingAnimation);
             }
         });
     }
